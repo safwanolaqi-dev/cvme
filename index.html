@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سيرة ذاتية – صفوان عولقي</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1B2A4A;
+  --navy2: #243660;
+  --gold: #C49A2B;
+  --gold-l: #E8C04A;
+  --gold-pale: #FBF4E0;
+  --gold-border: #D4AA35;
+  --white: #FFFFFF;
+  --off: #F7F5F0;
+  --border: #E2DDD4;
+  --text: #1E1E1E;
+  --muted: #5A5A5A;
+  --blue-tag: #EEF3FB;
+  --blue-tag-t: #1B3A7A;
+  --green-tag: #EBF7EE;
+  --green-tag-t: #1A5C32;
+  --amber-tag: #FBF3E2;
+  --amber-tag-t: #7A4E0A;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background: #ECEAE4;
+  color: var(--text);
+  direction: rtl;
+  line-height: 1.6;
+}
+
+.page {
+  max-width: 960px;
+  margin: 30px auto;
+  background: var(--white);
+  box-shadow: 0 4px 40px rgba(0,0,0,0.12);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* ── HEADER ── */
+.hdr {
+  background: var(--navy);
+  padding: 44px 52px 36px;
+  position: relative;
+}
+.hdr-accent {
+  position: absolute;
+  top: 0; right: 0;
+  width: 6px; height: 100%;
+  background: linear-gradient(to bottom, var(--gold), var(--gold-l));
+}
+.hdr-name {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  margin-bottom: 6px;
+}
+.hdr-title {
+  font-size: 15px;
+  color: var(--gold-l);
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+.hdr-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+}
+.hdr-c {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: rgba(255,255,255,0.82);
+  font-size: 13.5px;
+}
+.hdr-c-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+.hdr-c a { color: var(--gold-l); text-decoration: none; }
+
+/* ── SUMMARY ── */
+.summary {
+  background: var(--gold-pale);
+  border-right: 5px solid var(--gold);
+  padding: 18px 52px;
+  font-size: 14px;
+  line-height: 1.9;
+  color: #4A3800;
+  font-style: italic;
+}
+
+/* ── BODY ── */
+.body {
+  display: grid;
+  grid-template-columns: 1fr 310px;
+}
+
+/* ── LEFT: MAIN ── */
+.main {
+  padding: 40px 44px 40px 32px;
+  border-left: 1.5px solid var(--border);
+}
+
+/* ── RIGHT: SIDE ── */
+.side {
+  padding: 40px 32px;
+  background: var(--off);
+}
+
+/* ── SECTION TITLE ── */
+.sec-head {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--navy);
+}
+.sec-icon {
+  width: 34px; height: 34px;
+  background: var(--navy);
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 15px;
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+.sec-head h3 {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 0.3px;
+}
+
+.section { margin-bottom: 36px; }
+
+/* ── TIMELINE ITEM ── */
+.tl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0 14px;
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+}
+.tl:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.tl-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4px;
+}
+.tl-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 2px solid var(--navy);
+  flex-shrink: 0;
+}
+.tl-bar {
+  width: 2px;
+  flex: 1;
+  background: var(--border);
+  margin-top: 4px;
+}
+.tl:last-child .tl-bar { display: none; }
+
+.tl-body { padding-top: 2px; }
+.tl-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 3px;
+}
+.tl-title {
+  font-weight: 700;
+  font-size: 14.5px;
+  color: var(--navy);
+  flex: 1;
+  line-height: 1.4;
+}
+.tl-date {
+  font-size: 12px;
+  color: var(--white);
+  background: var(--navy2);
+  padding: 2px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.tl-org {
+  font-size: 13px;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.tl-desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ── SIDE COMPONENTS ── */
+.edu-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  border-right: 4px solid var(--gold);
+}
+.edu-deg {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--navy);
+  margin-bottom: 3px;
+}
+.edu-uni { font-size: 12.5px; color: var(--muted); margin-bottom: 4px; }
+.edu-badge {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 2px 9px;
+  border-radius: 4px;
+  background: var(--gold-pale);
+  color: var(--gold);
+  border: 1px solid var(--gold-border);
+}
+
+/* ── STAT GRID ── */
+.stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+.stat-box {
+  background: var(--navy);
+  border-radius: 8px;
+  padding: 14px 10px;
+  text-align: center;
+}
+.stat-n {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--gold-l);
+  display: block;
+  line-height: 1.1;
+}
+.stat-l {
+  font-size: 11px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.4;
+  margin-top: 3px;
+}
+
+/* ── RESEARCH ── */
+.res-item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed var(--border);
+}
+.res-item:last-child { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+.res-num {
+  width: 24px; height: 24px;
+  background: var(--navy);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11.5px;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.res-title { font-size: 13px; color: var(--text); line-height: 1.5; }
+.res-uni { font-size: 11.5px; color: var(--gold); font-weight: 600; margin-top: 2px; }
+
+/* ── MEMBERSHIP ── */
+.mem-item {
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  padding: 10px 12px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+}
+.mem-icon {
+  width: 28px; height: 28px;
+  background: var(--gold-pale);
+  border-radius: 5px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+.mem-name { font-size: 12.5px; font-weight: 700; color: var(--navy); line-height: 1.4; }
+.mem-sub { font-size: 11.5px; color: var(--muted); margin-top: 1px; }
+
+/* ── SKILLS ── */
+.skill-group { margin-bottom: 14px; }
+.skill-group:last-child { margin-bottom: 0; }
+.skill-cat {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--navy);
+  background: var(--gold-pale);
+  border-right: 3px solid var(--gold);
+  padding: 4px 9px;
+  margin-bottom: 7px;
+  border-radius: 0 4px 4px 0;
+}
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag {
+  font-size: 11.5px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+  border: 1px solid;
+}
+.tp { background: var(--blue-tag); color: var(--blue-tag-t); border-color: #BDD0F0; }
+.tg { background: var(--green-tag); color: var(--green-tag-t); border-color: #A0D4B0; }
+.ta { background: var(--amber-tag); color: var(--amber-tag-t); border-color: #DFC080; }
+
+/* ── FOOTER ── */
+.ftr {
+  background: var(--navy);
+  padding: 16px 52px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ftr-l { font-size: 12px; color: rgba(255,255,255,0.4); }
+.ftr-r { font-size: 12.5px; color: var(--gold-l); }
+
+@media print {
+  body { background: white; margin: 0; }
+  .page { box-shadow: none; margin: 0; border-radius: 0; max-width: 100%; }
+  @page { margin: 0; size: A4; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- HEADER -->
+<div class="hdr">
+  <div class="hdr-accent"></div>
+  <div class="hdr-name">صفوان بن محمود عولقي</div>
+  <div class="hdr-title">مشرف تربوي "تربية بدنية"  |  استشاري تعليمي ورياضي</div>
+  <div class="hdr-contacts">
+    <div class="hdr-c"><div class="hdr-c-dot"></div><span dir="ltr">+966 55 477 1213</span></div>
+    <div class="hdr-c"><div class="hdr-c-dot"></div><span>safwanolaqi@gmail.com</span></div>
+    <div class="hdr-c"><div class="hdr-c-dot"></div><a href="https://www.solaqi.com" target="_blank">www.solaqi.com</a></div>
+    <div class="hdr-c"><div class="hdr-c-dot"></div><a href="https://linktr.ee/olaqi" target="_blank">linktr.ee/olaqi</a></div>
+    <div class="hdr-c"><div class="hdr-c-dot"></div><span>مكة المكرمة، المملكة العربية السعودية</span></div>
+  </div>
+</div>
+
+<!-- SUMMARY -->
+<div class="summary">
+  خبرة ميدانية تمتد لأكثر من 25 عامًا في التعليم والإشراف التربوي وإدارة القطاع الرياضي، مع مشاركة فاعلة في خدمة ضيوف الرحمن والعمل المؤسسي غير الربحي. أسعى إلى تقديم استشارات وبرامج تدريبية متخصصة تُسهم في تطوير البيئات التعليمية والرياضية وفق مستهدفات رؤية 2030.
+</div>
+
+<div class="body">
+<!-- MAIN COL -->
+<div class="main">
+
+  <!-- المسيرة المهنية -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="sec-icon">💼</div>
+      <h3>المسيرة المهنية</h3>
+    </div>
+
+    <div class="tl">
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+      <div class="tl-body">
+        <div class="tl-head"><div class="tl-title">مشرف دعم التميز المدرسي</div><div class="tl-date">1445 هـ – الآن</div></div>
+        <div class="tl-org">إدارة التعليم – مكة المكرمة</div>
+        <div class="tl-desc">متابعة تطبيق معايير الجودة التعليمية ودعم المدارس في تحقيق التميز المؤسسي وفق المعايير الوطنية.</div>
+      </div>
+    </div>
+
+    <div class="tl">
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+      <div class="tl-body">
+        <div class="tl-head"><div class="tl-title">رئيس الشؤون التعليمية "مكلف"</div><div class="tl-date">1443 هـ</div></div>
+        <div class="tl-org">مكتب التعليم – جنوب مكة المكرمة</div>
+        <div class="tl-desc">الإشراف على الشؤون التعليمية والإدارية وقيادة الفرق التربوية لتحقيق الأهداف الاستراتيجية للمكتب.</div>
+      </div>
+    </div>
+
+    <div class="tl">
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+      <div class="tl-body">
+        <div class="tl-head"><div class="tl-title">مشرف تربوي</div><div class="tl-date">1436 هـ – حاضر</div></div>
+        <div class="tl-org">إدارة التعليم – مكة المكرمة</div>
+        <div class="tl-desc">الإشراف الميداني على المعلمين وتقديم التغذية الراجعة التطويرية، وقيادة مبادرات التحسين المستمر.</div>
+      </div>
+    </div>
+
+    <div class="tl">
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+      <div class="tl-body">
+        <div class="tl-head"><div class="tl-title">معلم تربية بدنية</div><div class="tl-date">1416–1436 هـ</div></div>
+        <div class="tl-org">إدارات التعليم: نجران، الطائف، مكة المكرمة</div>
+        <div class="tl-desc">تدريس التربية البدنية في مراحل دراسية متنوعة مع الانخراط في الأنشطة الرياضية المدرسية وتطوير الطلاب.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- خدمة ضيوف الرحمن -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="sec-icon">🕋</div>
+      <h3>خدمة ضيوف الرحمن</h3>
+    </div>
+
+    <div class="tl">
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+      <div class="tl-body">
+        <div class="tl-head"><div class="tl-title">مدرب حقيبة ترحاب</div><div class="tl-date">1444 هـ</div></div>
+        <div class="tl-org">شركة إثراء الجود</div>
+      </div>
+    </div>
+
+    <div class="tl">
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+      <div class="tl-body">
+        <div class="tl-head"><div class="tl-title">رئيس لجنة التدريب</div><div class="tl-date">1444 هـ</div></div>
+        <div class="tl-org">شركة إثراء الجود</div>
+      </div>
+    </div>
+
+    <div class="tl">
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+      <div class="tl-body">
+        <div class="tl-head"><div class="tl-title">رئيس مجموعة خدمة ميدانية</div><div class="tl-date">1432–1433 هـ</div></div>
+        <div class="tl-org">مكتب الزمازمة الموحد</div>
+      </div>
+    </div>
+
+    <div class="tl">
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+      <div class="tl-body">
+        <div class="tl-head"><div class="tl-title">رئيس لجنة البعثات</div><div class="tl-date">1429–1430 هـ</div></div>
+        <div class="tl-org">مؤسسة أفريقيا غير العربية</div>
+      </div>
+    </div>
+
+    <div class="tl">
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+      <div class="tl-body">
+        <div class="tl-head"><div class="tl-title">نائب رئيس لجنة تفويج الحجاج – منشأة الجمرات</div><div class="tl-date">1428 هـ</div></div>
+        <div class="tl-org">مؤسسة أفريقيا غير العربية</div>
+      </div>
+    </div>
+
+    <div class="tl">
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+      <div class="tl-body">
+        <div class="tl-head"><div class="tl-title">مشرف تخطيط ميداني</div><div class="tl-date">1426–1427 هـ</div></div>
+        <div class="tl-org">مؤسسة أفريقيا غير العربية</div>
+      </div>
+    </div>
+
+    <div class="tl">
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+      <div class="tl-body">
+        <div class="tl-head"><div class="tl-title">مشرف ميداني</div><div class="tl-date">1425 هـ</div></div>
+        <div class="tl-org">وزارة الحج</div>
+      </div>
+    </div>
+
+    <div class="tl">
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+      <div class="tl-body">
+        <div class="tl-head"><div class="tl-title">مراقب ميداني</div><div class="tl-date">1424 هـ</div></div>
+        <div class="tl-org">وزارة الحج</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- أنشطة وزارة الرياضة -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="sec-icon">🏅</div>
+      <h3>أنشطة وزارة الرياضة</h3>
+    </div>
+
+    <div class="tl">
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+      <div class="tl-body">
+        <div class="tl-head"><div class="tl-title">عضو لجنة الاتصال والاستثمار واللجنة الفنية</div><div class="tl-date">1431 هـ</div></div>
+        <div class="tl-org">الاتحاد السعودي للجمباز</div>
+      </div>
+    </div>
+
+    <div class="tl">
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+      <div class="tl-body">
+        <div class="tl-head"><div class="tl-title">عضو اللجنة المشرفة على دورة مدربي الجمباز – محلي وإقليمي</div><div class="tl-date">1432 هـ</div></div>
+        <div class="tl-org">الاتحاد السعودي للجمباز</div>
+      </div>
+    </div>
+
+    <div class="tl">
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+      <div class="tl-body">
+        <div class="tl-head"><div class="tl-title">عضو اللجنة التحضيرية – بطولة الخليج الثامنة للجمباز</div></div>
+        <div class="tl-org">الاتحاد السعودي للجمباز</div>
+      </div>
+    </div>
+
+    <div class="tl">
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+      <div class="tl-body">
+        <div class="tl-head"><div class="tl-title">إدارة منتخب المملكة للجمباز</div><div class="tl-date">1426 هـ</div></div>
+        <div class="tl-org">وزارة الرياضة</div>
+      </div>
+    </div>
+
+    <div class="tl">
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+      <div class="tl-body">
+        <div class="tl-head"><div class="tl-title">تحكيم جمباز – 4 مستويات</div><div class="tl-date">1426 هـ</div></div>
+        <div class="tl-org">وزارة الرياضة</div>
+      </div>
+    </div>
+
+    <div class="tl">
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+      <div class="tl-body">
+        <div class="tl-head"><div class="tl-title">مدرب جمباز</div><div class="tl-date">1413 هـ</div></div>
+        <div class="tl-org">وزارة الرياضة</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /main -->
+
+<!-- SIDE COL -->
+<div class="side">
+
+  <!-- التعليم -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="sec-icon">🎓</div>
+      <h3>التعليم</h3>
+    </div>
+    <div class="edu-card">
+      <div class="edu-deg">ماجستير الإدارة الرياضية</div>
+      <div class="edu-uni">1436 هـ</div>
+      <span class="edu-badge">ممتاز</span>
+    </div>
+    <div class="edu-card">
+      <div class="edu-deg">بكالوريوس تربية بدنية مع إعداد تربوي</div>
+      <div class="edu-uni">جامعة أم القرى – 1416 هـ</div>
+      <span class="edu-badge" style="background:#EEF3FB;color:#1B3A7A;border-color:#BDD0F0;">جيد</span>
+    </div>
+  </div>
+
+  <!-- رصيد التدريب -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="sec-icon">📊</div>
+      <h3>رصيد التدريب</h3>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-box"><span class="stat-n">+650</span><div class="stat-l">ساعة تدريب مُتلقّاة</div></div>
+      <div class="stat-box"><span class="stat-n">+345</span><div class="stat-l">ساعة تدريب مُقدَّمة</div></div>
+      <div class="stat-box"><span class="stat-n">32</span><div class="stat-l">برنامج – معهد الإدارة</div></div>
+      <div class="stat-box"><span class="stat-n">240</span><div class="stat-l">ساعة مكتسبة – إثرائي</div></div>
+    </div>
+  </div>
+
+  <!-- أبحاث علمية -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="sec-icon">📄</div>
+      <h3>أبحاث علمية منشورة</h3>
+    </div>
+    <div class="res-item">
+      <div class="res-num">1</div>
+      <div>
+        <div class="res-title"><a href="https://csspa.ksu.edu.sa/ar/safwanolaqi" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--gold);">التسويق الرياضي – دراسة علمية</a></div>
+        <div class="res-uni">جامعة الملك سعود، الرياض</div>
+      </div>
+    </div>
+    <div class="res-item">
+      <div class="res-num">2</div>
+      <div>
+        <div class="res-title"><a href="https://mnase.journals.ekb.eg/article_53187.html" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--gold);">التحصيل الدراسي – دراسة علمية</a></div>
+        <div class="res-uni">جامعة مدينة السادات، مصر</div>
+      </div>
+    </div>
+    <div class="res-item">
+      <div class="res-num">3</div>
+      <div>
+        <div class="res-title"><a href="https://jsbsh.journals.ekb.eg/article_155805.html" target="_blank" style="color:var(--text);text-decoration:none;border-bottom:1px dashed var(--gold);">التحصيل المعرفي – دراسة علمية</a></div>
+        <div class="res-uni">جامعة حلوان، مصر</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- العضويات -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="sec-icon">🏆</div>
+      <h3>العضويات والانتماءات</h3>
+    </div>
+    <div class="mem-item">
+      <div class="mem-icon">🌐</div>
+      <div><div class="mem-name">الجمعية العربية العالمية للإدارة الرياضية</div><div class="mem-sub">عضو مجلس التأسيس – 2019</div></div>
+    </div>
+    <div class="mem-item">
+      <div class="mem-icon">⚽</div>
+      <div><div class="mem-name">جمعية الإدارة الرياضية</div><div class="mem-sub">عضو مؤسس وعضو مجلس إدارة – 2024</div></div>
+    </div>
+    <div class="mem-item">
+      <div class="mem-icon">🤝</div>
+      <div><div class="mem-name">المركز الوطني لتنمية القطاع غير الربحي</div><div class="mem-sub">عضو فاعل</div></div>
+    </div>
+  </div>
+
+  <!-- الجدارات -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="sec-icon">⚡</div>
+      <h3>الجدارات المكتسبة</h3>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-cat">القيادة والإدارة</div>
+      <div class="tags">
+        <span class="tag tp">القيادة الإدارية</span>
+        <span class="tag tp">التخطيط التنفيذي</span>
+        <span class="tag tp">الإدارة والتنظيم</span>
+        <span class="tag tp">اتخاذ القرار</span>
+        <span class="tag tp">إدارة التغيير</span>
+        <span class="tag tp">التفويض</span>
+        <span class="tag tp">الإشراف الإداري</span>
+        <span class="tag tp">إدارة الميزانية</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-cat">التدريب والتطوير</div>
+      <div class="tags">
+        <span class="tag tg">إعداد المدربين</span>
+        <span class="tag tg">تحديد الاحتياجات التدريبية</span>
+        <span class="tag tg">تطوير الموظفين</span>
+        <span class="tag tg">إدارة الجودة الشاملة</span>
+        <span class="tag tg">تصميم البرامج التدريبية</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-cat">المهارات الشخصية</div>
+      <div class="tags">
+        <span class="tag ta">التواصل الفعّال</span>
+        <span class="tag ta">العمل الجماعي</span>
+        <span class="tag ta">الإدراك الاجتماعي</span>
+        <span class="tag ta">السلوك المرن</span>
+        <span class="tag ta">التكيّف</span>
+        <span class="tag ta">الانضباط</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-cat">التفكير وحل المشكلات</div>
+      <div class="tags">
+        <span class="tag tp">التفكير النقدي</span>
+        <span class="tag tp">تحليل المشكلة</span>
+        <span class="tag tp">حل المشاكل</span>
+        <span class="tag tp">تحليل العمليات</span>
+        <span class="tag tp">الفطنة والبصيرة</span>
+        <span class="tag tp">إدارة الصراع</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-cat">الجودة وخدمة العملاء</div>
+      <div class="tags">
+        <span class="tag tg">توجيه الخدمة</span>
+        <span class="tag tg">التركيز على الجودة</span>
+        <span class="tag tg">الأداء بأفضل مستوى</span>
+        <span class="tag tg">الرصد والمتابعة</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-cat">القيم والأخلاقيات</div>
+      <div class="tags">
+        <span class="tag ta">النزاهة</span>
+        <span class="tag ta">تحمّل المسؤولية</span>
+        <span class="tag ta">الولاء المؤسسي</span>
+        <span class="tag ta">التركيز على السلامة</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-cat">المهارات التقنية</div>
+      <div class="tags">
+        <span class="tag tp">مهارات الحاسوب</span>
+        <span class="tag tp">أمن المعلومات</span>
+        <span class="tag tp">تنظيم المؤتمرات</span>
+        <span class="tag tp">إدارة الضغوط</span>
+      </div>
+    </div>
+
+  </div>
+
+</div><!-- /side -->
+</div><!-- /body -->
+
+<!-- FOOTER -->
+<div class="ftr">
+  <span class="ftr-l">جميع الحقوق محفوظة – صفوان عولقي © 1446 هـ</span>
+  <span class="ftr-r">🔗 <a href="https://linktr.ee/olaqi" target="_blank" style="color:var(--gold-l);text-decoration:none;">linktr.ee/olaqi</a></span>
+</div>
+
+</div>
+</body>
+</html>
